@@ -30,9 +30,6 @@ Since it uses the POSIX API and no libraries except the GNU C library, it should
 > make   # this wil generate the executable 'wish' in 'bin' directory
 ```
 
-At this time, you'll end up cloning the whole `intro_os_course` repo. Sorry for that! In future, I will most likely create a separate repository for the shell program.
-
-
 ## Demo
 
 The `wish` shell program is built to specifications mentioned above. I will demonstrate the important features below

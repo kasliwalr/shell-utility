@@ -55,3 +55,12 @@ dkms.conf
 # Custom
 bin/
 scratch/
+
+
+# Bazel fles
+bazel-bin
+bazel-out
+bazel-testlogs
+bazel-shell-utility
+MODULE.bazel.lock
+*.swp

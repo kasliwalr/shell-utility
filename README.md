@@ -11,23 +11,34 @@ This shell program was written in C. It was completed as part of coursework in [
 
 The shell program specifications are on the course [project repository](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/processes-shell). There is no design document, however, the [source code](./src/wish.c) is sufficiently commented. 
 
+
+## Prerequisites
+You would need a bazel installation on your machine. To install bazel use bazelisk, this is the most portable way for Mac/Linux/Windows
+
 ## Installation
 
-Since it uses the POSIX API and no libraries except the GNU C library, it should run on any Linux machine. The installation instruction are provided below
-
+Since `wish` uses the POSIX API and no libraries except the GNU C library, it should run on any Linux machine. The installation instruction are provided below
 
 1. Clone the repo and perform the following steps 
 ```
 > git clone https://github.com/kasliwalr/intro_os_course.git
 > cd  intro_os_course/project_assignments/p2a 
 > mkdir bin  # create the 'bin' directory to hold the executable
-> tree -L 1
+> tree -L 2
 .
-├── bin
-├── Makefile
+├── LICENSE
+├── MODULE.bazel
+├── README.md
+├── WORKSPACE
 └── src
-2 directories, 1 file
-> make   # this wil generate the executable 'wish' in 'bin' directory
+    ├── BUILD.bazel
+    ├── tests.md
+    └── wish.c
+
+6 directories, 7 files
+> bazel run //src:wish --cxxopt='-std=c++11'  # builds and run the application
+
+> bazel build //src:wish --cxxopt='-std=c++17' # build only, and then invoke as described in #demo
 ```
 
 ## Demo
